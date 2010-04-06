@@ -1,0 +1,42 @@
+PHP INI CONFIGURATION CLASS
+
+This class is used to encapuslate and serve the configuration settings from a 
+config.ini file to the script or class using it.
+
+PHP 5
+
+LICENSE: This file and it's contents are licensed under the MIT license, which is
+available at the following URL: http://creativecommons.org/licenses/MIT/
+Basically, you're free to do whatever you like with the code.  I just ask to leave
+some sort of credit to the author in the re-written/derivative work.
+
+@category   Configuration
+@package    PHP INI Configuration Class
+@author     David Miles <david@amereservant.com>
+@copyright  ©2010 David Miles
+@license    http://creativecommons.org/licenses/MIT/ MIT License
+@version    1.0
+@since      File available since Release 1.0 (Apr. 02, 2010)
+@link       http://www.webdesignparlor.com/ Web Design Parlor - Author Site
+@link       http://github.com/amereservant/PHP-Configuration-INI-Parser-Class.git
+
+INSTRUCTIONS:
+   * Copy the files from this project (config.ini & config.class.php) to your project's
+     directory, which can be a sub-directory if you like.
+     
+   * Edit the config.ini file and add your information accordingly.
+   
+   * require/include the config.class.php file at the top of your script, then simply
+     use Config::getParam('database', 'user'); with the first parameter being the 
+     section name and the second parameter being the value in that section.
+     
+     Just keep repeating this throughout your script whereever you need specific data
+     from your configuration file.
+     
+NOTES:
+    * Sections are optional and if you are PHP savvy and wish to remove them,
+      start with the parse_ini_file('config.ini', true); on Line 66 and remove the
+      second parameter from that function.
+      You can see http://php.net/parse_ini_file for more information about this.
+      You will then need to adjust the method getParam so it doesn't use the second
+      parameter anymore.
